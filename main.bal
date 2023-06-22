@@ -1,7 +1,7 @@
 import ballerina/http;
 import ballerina/log;
 
-service /customcollegeapi on new http:Listener(9092) {
+service / on new http:Listener(9091) {
 
     resource function get graduationinfo/[string id]() returns anydata|http:InternalServerError|error? {
         http:Client clientEp = check new ("https://api.sinclair.edu/portlet/api/");
